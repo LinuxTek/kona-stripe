@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeHandlers>
+        <typeHandler javaType="java.util.TimeZone" jdbcType="VARCHAR"
+            handler="com.linuxtek.kona.mybatis.KTimeZoneHandler"/>
+
+        <typeHandler javaType="java.util.Locale" jdbcType="VARCHAR"
+            handler="com.linuxtek.kona.mybatis.KLocaleHandler"/>
+
+        <typeHandler javaType="com.linuxtek.kona.entity.KUser$Gender" 
+            jdbcType="VARCHAR"
+            handler="com.linuxtek.kona.mybatis.KGenderHandler"/>
+
+    </typeHandlers>
+</configuration>

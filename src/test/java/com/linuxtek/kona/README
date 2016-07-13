@@ -1,0 +1,14 @@
+By default, the Surefire Plugin will automatically include all 
+test classes with the following wildcard patterns:
+
+"**/Test*.java" 
+    - includes all of its subdirectories and all java filenames 
+    that start with "Test".
+
+"**/*Test.java" 
+    - includes all of its subdirectories and all java filenames 
+    that end with "Test".
+
+"**/*TestCase.java" 
+    - includes all of its subdirectories and all java filenames 
+    that end with "TestCase".
