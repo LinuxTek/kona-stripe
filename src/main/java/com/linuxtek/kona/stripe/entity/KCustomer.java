@@ -10,15 +10,18 @@ public class KCustomer implements KStripeEntity {
     boolean livemode;
     boolean deleted;
     String description;
-    KCard activeCard;
+    KCard defaultCard;
     String email;
+    boolean delinquent;
+    Integer accountBalance;
+    
+    /*
     String plan;
     Long trialEnd;
     KDiscount discount;
     KNextRecurringCharge nextRecurringCharge;
     KSubscription subscription;
-    boolean delinquent;
-    Integer accountBalance;
+    */
 
     public Long getCreated() {
         return created;
@@ -40,7 +43,8 @@ public class KCustomer implements KStripeEntity {
         return livemode;
     }
 
-    public void setLivemode(boolean livemode) {
+    public void setLivemode(Boolean livemode) {
+        if (livemode == null) livemode = false;
         this.livemode = livemode;
     }
 
@@ -52,12 +56,12 @@ public class KCustomer implements KStripeEntity {
         this.description = description;
     }
 
-    public KCard getActiveCard() {
-        return activeCard;
+    public KCard getDefaultCard() {
+        return defaultCard;
     }
 
-    public void setActiveCard(KCard activeCard) {
-        this.activeCard = activeCard;
+    public void setDefaultCard(KCard defaultCard) {
+        this.defaultCard = defaultCard;
     }
 
     public String getEmail() {
@@ -68,6 +72,7 @@ public class KCustomer implements KStripeEntity {
         this.email = email;
     }
 
+    /*
     public String getPlan() {
         return plan;
     }
@@ -108,12 +113,14 @@ public class KCustomer implements KStripeEntity {
     public void setSubscription(KSubscription subscription) {
         this.subscription = subscription;
     }
+    */
 
     public boolean isDeleted() {
         return deleted;
     }
 
-    public void setDeleted(boolean deleted) {
+    public void setDeleted(Boolean deleted) {
+        if (deleted == null) deleted = false;
         this.deleted = deleted;
     }
 
@@ -121,7 +128,8 @@ public class KCustomer implements KStripeEntity {
         return delinquent;
     }
 
-    public void setDelinquent(boolean delinquent) {
+    public void setDelinquent(Boolean delinquent) {
+        if (delinquent == null) delinquent = false;
         this.delinquent = delinquent;
     }
 

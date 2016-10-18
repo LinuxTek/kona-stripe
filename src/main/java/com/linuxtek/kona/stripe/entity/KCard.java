@@ -11,7 +11,7 @@ public class KCard implements KStripeEntity {
 	Integer expYear;
 	String last4;
 	String country;
-	String type;
+	String brand;
 	String name;
 	String addressLine1;
 	String addressLine2;
@@ -72,12 +72,12 @@ public class KCard implements KStripeEntity {
 		this.country = country;
 	}
 
-	public String getType() {
-		return type;
+	public String getBrand() {
+		return brand;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 
 	public String getName() {
